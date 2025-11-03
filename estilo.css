@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at center, #000 50%, #111);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ======== TOPO ======== */
+.topo {
+  background: transparent;
+  text-align: center;
+  padding: 1rem;
+}
+.logo-senac {
+  width: 120px;
+}
+
+/* ======== MAPA MENTAL ======== */
+.mapa-mental {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #111 40%, #000);
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.logo-central {
+  width: 130px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  animation: pulsar 2s infinite alternate;
+}
+@keyframes pulsar {
+  from { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.4); }
+  to { transform: scale(1.05); box-shadow: 0 0 25px rgba(255,255,255,0.8); }
+}
+
+/* ======== BOTÕES ======== */
+.atalho {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.atalho:hover {
+  background: #f0c000;
+  transform: scale(1.1);
+}
+
+/* ======== POSIÇÃO DOS RAMOS ======== */
+.ramo { position: absolute; }
+.ramo1 { top: 5%; left: 50%; transform: translateX(-50%); }
+.ramo2 { top: 30%; left: 90%; transform: translateY(-50%); }
+.ramo3 { top: 70%; left: 90%; transform: translateY(-50%); }
+.ramo4 { top: 85%; left: 50%; transform: translateX(-50%); }
+.ramo5 { top: 70%; left: 10%; transform: translateY(-50%); }
+.ramo6 { top: 30%; left: 10%; transform: translateY(-50%); }
+
+/* ======== ABAS ======== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+.aba {
+  display: none;
+  background: #111;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transform: scale(0.98);
+  transition: opacity 0.4s, transform 0.4s;
+  opacity: 0;
+}
+.aba.ativa {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ======== QR CODE ======== */
+.qrcode-section {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #0f0f0f;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.qrcode-section h2 {
+  color: #f0c000;
+  margin-bottom: 0.6rem;
+}
+.qrcode-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  min-height: 160px;
+}
+.qrcode-section button {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.qrcode-section button:hover {
+  background: #f0c000;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  background: #000;
+  color: #ccc;
+  padding: 1rem;
+  border-top: 1px solid #333;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 600px) {
+  .mapa-mental {
+    width: 320px;
+    height: 320px;
+  }
+  .logo-central {
+    width: 90px;
+  }
+  .atalho {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+}

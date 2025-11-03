@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IncluTech - Projeto SENAC</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- TOPO COM LOGO DO SENAC -->
+  <header class="topo">
+    <img src="logo senac.png" alt="Logo do SENAC" class="logo-senac">
+  </header>
+
+  <!-- MAPA MENTAL -->
+  <section class="mapa-mental">
+    <div class="centro">
+      <img src="logo do projeto.jpg" alt="Logo IncluTech" class="logo-central">
+      <h2>IncluTech</h2>
+    </div>
+
+    <!-- Ramos (atalhos) -->
+    <div class="ramo ramo1"><button class="atalho" data-aba="inicio">🏠 Início</button></div>
+    <div class="ramo ramo2"><button class="atalho" data-aba="projeto">📘 Projeto</button></div>
+    <div class="ramo ramo3"><button class="atalho" data-aba="senac">🏫 Sobre o SENAC</button></div>
+    <div class="ramo ramo4"><button class="atalho" data-aba="ias">🤖 IAs</button></div>
+    <div class="ramo ramo5"><button class="atalho" data-aba="video">🎥 Vídeo</button></div>
+    <div class="ramo ramo6"><button class="atalho" data-aba="contato">📞 Contato</button></div>
+
+    <!-- Botão de voz -->
+    <button id="voz-btn" aria-label="Ler página">🔊</button>
+  </section>
+
+  <!-- CONTEÚDO EM ABAS -->
+  <main>
+    <section id="inicio" class="aba ativa">
+      <h2>Bem-vindo ao Projeto IncluTech!</h2>
+      <p>O IncluTech é um projeto do SENAC voltado à inclusão tecnológica de pessoas com deficiência visual e auditiva.</p>
+      <p>Nosso objetivo é usar a tecnologia como ponte para a acessibilidade, promovendo igualdade de oportunidades e autonomia digital.</p>
+    </section>
+
+    <section id="projeto" class="aba">
+      <h2>Sobre o Projeto IncluTech</h2>
+      <p>O Projeto IncluTech nasceu no <strong>SENAC</strong> com o propósito de conectar tecnologia e inclusão social. A ideia é apresentar soluções inovadoras que ajudem pessoas com deficiência a interagir com o mundo digital de forma mais independente.</p>
+      <p>Entre as ferramentas exploradas estão aplicativos com leitura de tela, tradutores automáticos de Libras, e o uso de inteligências artificiais assistivas.</p>
+      <p>Além de desenvolver essas soluções, o IncluTech busca conscientizar a sociedade sobre a importância da acessibilidade digital.</p>
+    </section>
+
+    <section id="senac" class="aba">
+      <h2>Sobre o SENAC</h2>
+      <p>O <strong>SENAC (Serviço Nacional de Aprendizagem Comercial)</strong> é uma instituição brasileira que há mais de 70 anos forma profissionais qualificados em diversas áreas, com foco no comércio, serviços e turismo.</p>
+      <p>O SENAC tem como missão <em>“Educar para o trabalho em atividades do comércio de bens, serviços e turismo”</em>, sendo referência em inclusão, inovação e transformação social.</p>
+      <p>Com unidades em todo o Brasil, o SENAC promove cursos técnicos, livres, de graduação e pós-graduação, sempre com o objetivo de capacitar pessoas e gerar oportunidades de crescimento profissional.</p>
+      <p><strong>Unidade de referência:</strong> SENAC Parnaíba - PI</p>
+    </section>
+
+    <section id="ias" class="aba">
+      <h2>IAs Inclusivas</h2>
+      <ul>
+        <li><strong>Be My Eyes:</strong> Conecta pessoas cegas a voluntários por vídeo em tempo real.</li>
+        <li><strong>AVA:</strong> Traduz voz e texto para Libras, auxiliando na comunicação com pessoas surdas.</li>
+        <li><strong>Seeing AI:</strong> Descreve pessoas, objetos e textos, facilitando o dia a dia de quem tem deficiência visual.</li>
+      </ul>
+    </section>
+
+    <section id="video" class="aba">
+      <h2>Vídeo sobre Inclusão</h2>
+      <iframe src="https://www.youtube.com/embed/BS5IqbaGOjk" allowfullscreen></iframe>
+    </section>
+
+    <section id="contato" class="aba">
+      <h2>Contato</h2>
+      <p>📍 SENAC Parnaíba - PI</p>
+      <p>📞 (86) 3322-3487</p>
+      <p>✉️ contato@senacpi.edu.br</p>
+    </section>
+  </main>
+
+  <!-- GERADOR DE QRCODE -->
+  <section id="qrcode-section" class="qrcode-section">
+    <h2>QR Code do Site</h2>
+    <p>Escaneie o QR Code abaixo para acessar o site do Projeto IncluTech:</p>
+    <div id="qrcode-result" aria-live="polite" class="qrcode-result"></div>
+    <button id="download-btn" type="button" disabled>Baixar QR Code</button>
+  </section>
+
+  <footer>
+    <p>© 2025 SENAC - Projeto IncluTech | Desenvolvido Pela Turma 97</p>
+  </footer>
+
+  <!-- Biblioteca QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
